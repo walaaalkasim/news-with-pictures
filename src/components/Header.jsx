@@ -5,7 +5,7 @@ const Header = ({ input, handleChange, handleSubmit, inputRef }) => {
   console.log(input);
   return (
     <header>
-      <h1 className="titleName">News POSTS</h1>
+      <h1 className="titleName">NEWS POSTS</h1>
       <Search
         inputRef={inputRef}
         input={input}

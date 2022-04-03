@@ -6,6 +6,7 @@ const Search = ({ input, handleChange, handleSubmit, inputRef }) => {
     <div className="searchBtn">
       <form>
         <input
+          placeholder="type somthing e.x: health"
           ref={inputRef}
           type="text"
           maxLength="200"

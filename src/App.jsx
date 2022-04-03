@@ -6,12 +6,12 @@ import Header from "./components/Header";
 
 const App = () => {
   const API_KEY = process.env.REACT_APP_API_KEY;
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("apple");
   const [info, setInfo] = useState(null);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  const url = `https://newsapi.org/v2/everything?q=${search}&apiKey=02ddc5c0155947a5a8eadec4ebb7670e`;
+  const url = `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`;
 
   useEffect(() => {
     fetch(url)
@@ -20,7 +20,7 @@ const App = () => {
       .then(() => setIsLoading(false))
       .catch((error) => console.log(error));
   }, [url]);
-
+  console.log(info);
   const inputRef = useRef();
 
   useEffect(() => {
@@ -44,7 +44,6 @@ const App = () => {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
-
       {!isLoading && <NewsContainer info={info} />}
     </main>
   );

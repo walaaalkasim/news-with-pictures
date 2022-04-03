@@ -1,8 +1,5 @@
 import React from "react";
 
-/* <li>{res.results.map((el) => el.sectionName)}</li> */
-// {res.results.map((el) => (<li>{el.webTitle} </li>))}
-
 const NewsItem = ({ item }) => {
   const { title, publishedAt, urlToImage, description, url } = item;
 
@@ -10,7 +7,7 @@ const NewsItem = ({ item }) => {
     <>
       <div className="title">
         <div className="image">
-          <img src={urlToImage} alt="" />
+          <img src={urlToImage} alt=" not found" />
         </div>
         {title}
         {description}
